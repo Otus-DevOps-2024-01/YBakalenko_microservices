@@ -1,0 +1,13 @@
+REPOSITORY                                TAG       IMAGE ID       CREATED              SIZE
+yevgeny/ubuntu-tmp-file                   latest    05e643863d6f   About a minute ago   56.7MB
+nginx                                     latest    070027a3cbe0   6 weeks ago          192MB
+ghcr.io/ybakalenko/icecube-backend        latest    c3de6c2a36c7   4 months ago         1.46GB
+ghcr.io/ybakalenko/icecube-frontend       latest    f3289f35647b   4 months ago         1.3GB
+artifision/live-charts-docker-extension   1.2.0     bf0e2bfba396   4 months ago         9.01MB
+icecube_v2-streamlit                      latest    b7096880671b   9 months ago         1.28GB
+<none>                                    <none>    42c0e9707e60   9 months ago         1.28GB
+<none>                                    <none>    5d4312ccccab   9 months ago         1.28GB
+<none>                                    <none>    e53954561338   9 months ago         1.22GB
+icecube_v2-fastapi                        latest    bc839da85d22   9 months ago         1.44GB
+ubuntu                                    18.04     d1a528908992   10 months ago        56.7MB
+hello-world                               latest    ee301c921b8a   11 months ago        9.14kB
