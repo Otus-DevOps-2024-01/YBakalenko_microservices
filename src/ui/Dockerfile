@@ -1,5 +1,6 @@
 # FROM ubuntu:16.04
 FROM ruby:2.4
+    # 2.4
 RUN apt-get update -qq \
     && apt-get install -y build-essential
 #    && gem install bundler:1.17.2 --no-ri --no-rdoc
