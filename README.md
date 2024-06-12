@@ -1,9 +1,7 @@
 # YBakalenko_micorservices
 
 ## Ingress-контроллеры и сервисы в Kubernetes (kubernetes-3)
- - Снова поднял кластер на yandex cloud
- - Втянул содержимое, полученное в конце прошлой домашки
- - Поигрался со скейлом для kube-dns и обнаружил, что он исчезает, вернул его на место
+ - Поменял скейл для kube-dns и обнаружил, что он исчезает, вернул его на место
  - Поменял тип `ui-service` на `LoadBalancer`
  - Импортировал компонент для создания `IngressController`-а. Правильная команда всё же такая:
    `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml`
