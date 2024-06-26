@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mongo-dvc
+  name: {{ template "mongo-pvc.fullname" . }}
 spec:
-  storageClassName: fast
+  storageClassName: yc-network-hdd
   accessModes:
   - ReadWriteOnce
   resources:
     requests:
       storage: 4Gi
-  volumeName: mongo-dv
+  # volumeName: {{ template "mongo-pv.fullname" . }}

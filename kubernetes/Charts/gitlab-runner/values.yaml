@@ -1,0 +1,50 @@
+gitlabUrl: https://gitlab.example.com/
+
+runnerRegistrationToken: "glrt-sY8b9mz3y7eEcNFRa-vG"
+
+certsSecretName: gitlab-wildcard-tls-chain
+
+concurrent: 10
+
+checkInterval: 30
+
+hostAliases:
+  - ip: "158.160.150.119"
+    hostnames:
+    - "gitlab.example.com"
+
+serviceAccount:
+  create: true
+
+rbac:
+  create: true
+  rules:
+    - apiGroups: [""]
+      resources: ["pods"]
+      verbs: ["list", "get", "watch", "create", "delete"]
+    - apiGroups: [""]
+      resources: ["pods/exec"]
+      verbs: ["create"]
+    - apiGroups: [""]
+      resources: ["pods/log"]
+      verbs: ["get"]
+    - apiGroups: [""]
+      resources: ["pods/attach"]
+      verbs: ["list", "get", "create", "delete", "update"]
+    - apiGroups: [""]
+      resources: ["secrets"]
+      verbs: ["list", "get", "create", "delete", "update"]
+    - apiGroups: [""]
+      resources: ["configmaps"]
+      verbs: ["list", "get", "create", "delete", "update"]
+
+runners:
+  privileged: true
+
+  # or ubuntu:20.04 ?
+  config: |
+    [[runners]]
+      [runners.kubernetes]
+        tls_verify = false
+        image = "docker:19"
+        privileged = true

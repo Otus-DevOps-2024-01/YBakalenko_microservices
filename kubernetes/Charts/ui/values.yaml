@@ -1,0 +1,15 @@
+service:
+  internalPort: 9292
+  externalPort: 9292
+
+image:
+  repository: ybakalenko/ui
+  tag: latest
+
+postHost:
+postPort:
+commentHost:
+commentPort:
+
+ingress:
+  class: nginx

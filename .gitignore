@@ -1,2 +1,3 @@
 docker/.env
 minikube-darwin-arm64
+gitlab_ci

@@ -1,0 +1,3 @@
+image:
+  repository: mongo
+  tag: "3.6"
