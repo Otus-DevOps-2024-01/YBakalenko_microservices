@@ -1,0 +1,27 @@
+comment:
+  image:
+    repository: ybakalenko/comment
+    tag: latest
+  service:
+    externalPort: 9292
+
+post:
+  image:
+    repository: ybakalenko/post
+    tag: latest
+  service:
+    externalPort: 5000
+
+ui:
+  image:
+    repository: ybakalenko/ui
+    tag: latest
+  service:
+    externalPort: 9292
+
+databaseHost: # mongodb
+
+mongodb:
+  image:
+    repository: mongo
+    tag: "3.6"

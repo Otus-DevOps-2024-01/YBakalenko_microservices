@@ -2,10 +2,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongo
+  name: {{ template "mongo.fullname" . }}
   labels:
     app: reddit
     component: mongo
+    release: {{ .Release.Name }}
     post-db: "true"
     comment-db: "true"
 spec:
@@ -14,17 +15,19 @@ spec:
     matchLabels:
       app: reddit
       component: mongo
+      release: {{ .Release.Name }}
   template:
     metadata:
       name: mongo
       labels:
         app: reddit
         component: mongo
+        release: {{ .Release.Name }}
         post-db: "true"
         comment-db: "true"
     spec:
       containers:
-      - image: mongo:3.6  # previous: 3.2
+      - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"  # previous: 3.2
         name: mongo
         volumeMounts:
         - name: mongo-persistent-storage
@@ -32,4 +35,4 @@ spec:
       volumes:
       - name: mongo-persistent-storage
         persistentVolumeClaim:
-          claimName:  mongo-pvc
+          claimName:  {{ template "mongo-pvc.fullname" . }}

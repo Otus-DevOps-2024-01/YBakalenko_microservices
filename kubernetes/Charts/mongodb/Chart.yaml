@@ -1,0 +1,7 @@
+name: mongodb
+version: 1.0.0
+description: OTUS Mongo database for reddit application
+maintainers:
+  - name: Yevgeny Bakalenko
+    email: yevgeny.bakalenko@gmail.com
+appVersion: 1.0
